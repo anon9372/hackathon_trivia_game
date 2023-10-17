@@ -39,7 +39,7 @@ const Home = () => {
         const name = event.target.name.value;
         const gameID = event.target.gameID.value;
         dispatch(setName(name));
-        navigate.push(`/room/${gameID}`);
+        navigate(`/room/${gameID}`);
     };
     return (
         <Center bg="#151515" minH="100vh">

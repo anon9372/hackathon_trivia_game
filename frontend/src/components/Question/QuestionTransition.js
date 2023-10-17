@@ -3,12 +3,20 @@ import React from 'react'; // Import React
 import { Heading } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 const QuestionTransition = ({ questionNo, duration }) => {
-  const [timeLeft, setTimeLeft] = useState(duration / 1000);
+  console.log('helloduration', duration)
+  let setDuration = duration / 1000;
+  const [timeLeft, setTimeLeft] = useState(setDuration);
 
   useEffect(() => {
-    setInterval(() => {
+    const interval = setInterval(() => {
       setTimeLeft((prev) => {
-        return prev - 1;
+        console.log('prev', prev);
+        if (prev > 0) {
+          return prev - 1;
+        } else {
+          clearInterval(interval); // Clear the interval when timeLeft reaches 0
+          return prev; // Return the same value to stop further updates
+        }
       });
     }, 1000);
   }, []);
