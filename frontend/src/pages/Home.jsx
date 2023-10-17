@@ -44,7 +44,7 @@ const Home = () => {
     return (
         <Center bg="#151515" minH="100vh">
             <VStack spacing="1rem">
-                <Heading color="#5582ac">Multiplayer Trivia</Heading>
+                <Heading color="#029688">The Trivia Game</Heading>
                 <Tabs variant="soft-rounded" colorScheme="yellow">
                     <TabList>
                         <Tab>New Game</Tab>
@@ -54,8 +54,8 @@ const Home = () => {
                         <TabPanel>
                             <form onSubmit={createGameHandler}>
                                 <FormControl id="name" isRequired name="name">
-                                    <FormLabel color="#5582ac">Your name</FormLabel>
-                                    <Input color="#5582ac" />
+                                    <FormLabel color="#029688">Your name</FormLabel>
+                                    <Input color="#029688" />
                                 </FormControl>
                                 <Button
                                     mt="1rem"
@@ -70,12 +70,12 @@ const Home = () => {
                         <TabPanel>
                             <form onSubmit={joinGameHandler}>
                                 <FormControl id="gameID" isRequired name="gameID">
-                                    <FormLabel color="#5582ac">Game ID</FormLabel>
-                                    <Input color="#5582ac" />
+                                    <FormLabel color="#029688">Game ID</FormLabel>
+                                    <Input color="#029688" />
                                 </FormControl>
                                 <FormControl id="name" isRequired name="name">
-                                    <FormLabel color="#5582ac">Your name</FormLabel>
-                                    <Input color="#5582ac" />
+                                    <FormLabel color="#029688">Your name</FormLabel>
+                                    <Input color="#029688" />
                                 </FormControl>
                                 <Button
                                     mt="1rem"

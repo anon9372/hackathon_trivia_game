@@ -2,7 +2,7 @@ import React from 'react'; // Import React
 
 import { Box } from "@chakra-ui/react";
 
-const optionColours = ["#5582ac", "#f8f1ba", "#ea977d", "#e2c14d"];
+const optionColours = ["#029688", "#f8f1ba", "#ea977d", "#e2c14d"];
 
 // Parse HTML entities in string
 export const parseEntities = (content) =>

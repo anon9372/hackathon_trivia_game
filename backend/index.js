@@ -21,7 +21,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server, {
   cors: true,
-  origins: ["https://localhost:3000"],
+  origins: ["http://localhost:3000"],
 });
 
 app.use(cors);
@@ -120,6 +120,6 @@ io.on("connect", (socket) => {
   });
 });
 
-server.listen(process.env.PORT || 6000, () =>
+server.listen(process.env.PORT || 5001, () =>
   console.log(`Server has started.`)
 );

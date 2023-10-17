@@ -17,12 +17,13 @@ import GameView from "../components/GameView/index";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { setSocketID } from "../store/user";
 
-const ENDPOINT = "https://multiplayer-trivia-game.herokuapp.com/";
+const ENDPOINT = "http://localhost:5001";
 
 let socket;
 
 const GameRoom = () => {
     const { id } = useParams();
+    console.log('helloid', id)
     const history = useNavigate();
     const dispatch = useDispatch();
     const { name } = useSelector((state) => state.user);
@@ -100,7 +101,7 @@ const GameRoom = () => {
     return (
         <Center bg="#151515" minH="100vh">
             <VStack spacing="1rem" color="white">
-                <Heading color="#5582ac">Game Room</Heading>
+                <Heading color="#029688">Game Room</Heading>
                 <p>
                     Game ID:{" "}
                     <CopyToClipboard
